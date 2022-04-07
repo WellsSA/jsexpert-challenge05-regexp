@@ -4,7 +4,7 @@
 
 Atendendo a pedidos, agora temos ainda mais dicas de como resolver o desafio, pro caso de em algum momento você ficar preso durante o desenvolvimento.
 
-Aqui você encontra uma coletânea de _dicas extras_ que podem te ajudar durante o processo, mas vale lembrar que é uma boa começar sem elas primeiro, hein?
+Aqui você encontra uma coletânea de _dicas extras_ que podem te ajudar durante o processo, mas vale lembrar que é uma boa **começar sem elas primeiro**, hein?
 
 ### Sugestão de implementação
 
