@@ -24,7 +24,7 @@
 
 ## Motivação
 
-Com o objetivo de trazer cenários reais aplicando os conteúdos vistos no `módulo 06 - Expressões Regulares - RegExp`, a idéia é levar vocês a fazer um "CSV parser" customizado usando `Expressões Regulares` para obter as informações de dentro de um arquivo CSV, mas não só isso como também aplicar essas `Expressões Regulares` nas informações retornadas para extrair ainda mais informação de valor, formatação e padronização ao nosso código final, tudo isso enquanto usamos `TDD` na prática usando padrões de projeto como `Fluent API` e `Facade`, e também entendemos mais sobre a `validação de segurança de Expressões Regulares`!
+Com o objetivo de trazer cenários reais aplicando os conteúdos vistos no `módulo 06 - Expressões Regulares - RegExp`, a idéia é levar vocês a fazer um "CSV parser" customizado usando `Expressões Regulares` para obter as informações de dentro de um arquivo CSV, mas não só isso como também aplicar essas `Expressões Regulares` nas informações retornadas para extrair ainda mais informação de valor, formatação e padronização ao nosso código final, tudo isso enquanto usamos `TDD na prática` aprendendo padrões de projeto como `Fluent API` e `Facade`, e também entendemos mais sobre a `validação de segurança de Expressões Regulares`!
 
 ## Idéia geral
 
@@ -40,7 +40,7 @@ Esses dados podem ser amplamente utilizados em diversos segmentos empresariais, 
 
 Pensando na importância dos dados mencionados a pouco, dentre esta vastidão de dados disponibilizados no [Portal de dados abertos da ALESP][dadosabertosalesp], usaremos como base o [CSV de Projetos de Lei][projetoscsv] para fazer uma aplicação que lê os projetos de lei presentes no CSV e extrai informações úteis sobre eles, facilitando a busca e exibição desses dados em outros portais no futuro.
 
-### Etapa 1 - leitura do CSV
+### Etapa 1 - Leitura do CSV
 
 Usando `Expressões Regulares` e o `Projeto base feito em aula durante o módulo 06`, faça uma aplicação usando os padrões de projeto `Fluent API` e `Facade` que leia e extraia as informações presentes no [CSV de Projetos de Lei fornecido no desafio][csvdesafio] e as deixe prontas para o uso da aplicação.
 
@@ -49,7 +49,8 @@ Usando `Expressões Regulares` e o `Projeto base feito em aula durante o módulo
 #### Objetivo
 
 Ler e deixar utilizáveis os campos `título`, `link`, `autor`, `etapa`, `ementa` e `indexadoresnorma`.
-Objeto de exemplo:
+
+#### Objeto de exemplo
 
 ```js
 {
@@ -70,7 +71,7 @@ Objeto de exemplo:
 - `textProcessorFacade.js`: responsável por abstrair a execução do `TextProcessorFluentAPI` implementando um método `getProjectsFromCSV` que contém as chamadas ao Fluent API em ordem.
 - `textProcessorFluentAPI.js`: responsável por implementar a Fluent API separando em etapas o processo de leitura e formatação do arquivo.
 
-### Etapa 2 - extração de dados úteis
+### Etapa 2 - Extração de dados úteis
 
 Usando `Expressões Regulares` e o `TextProcessorFluentAPI` feito na Etapa 1, crie uma classe que receba como valores os campos "raw" (`título`, `link`, `autor`, `etapa`, `ementa` e `indexadoresnorma`) e extraia informações úteis desses campos, retornando no construtor uma instância formatada com informações pertinentes.
 
@@ -80,7 +81,7 @@ Usando `Expressões Regulares` e o `TextProcessorFluentAPI` feito na Etapa 1, cr
 
 Criar uma classe que receba no construtor os campos `título`, `link`, `autor`, `etapa`, `ementa` e `indexadoresnorma` e retorne uma instância com os campos `id`, `numero`, `ano`, `autores`, `url` e `indexadores`.
 
-Objeto de exemplo:
+#### Objeto de exemplo:
 
 ```js
 {
@@ -125,9 +126,9 @@ Objeto de exemplo:
 
 ### Dicas
 
-- Lembre-se que para trabalhar com `Expressões Regulares`, é possível testar elas em tempo real usando o site [Regex101][regex101], e lembre-se sempre que além das aulas e das anotações, o Google é sempre uma boa ferramenta.
+- Lembre-se que para trabalhar com `Expressões Regulares`, é possível testar elas em tempo real usando o site [Regex101][regex101], e lembre-se sempre que além das aulas e das anotações, pesquisar no Google e fazer calls na comunidade do discord pode ser algo muito bom caso você fique preso testando as regex.
 
-  > Dica Wells do dia: Fazer o passo a passo usando TDD muito provavelmente vai deixar as coisas bem mais fáceis :)
+  > Dica Wells do dia: Seguir certinho o passo a passo usando TDD muito provavelmente vai deixar as coisas bem mais fáceis também :)
 
 - Para melhorar sua experiência de desenvolvimento, você pode usar a extensão [TODO Highlight][todohighlight] no VSCode, recebendo o auxilio visual para encontrar os `//TODO: comments`, assim:
   ![image](https://user-images.githubusercontent.com/41883467/153465555-f2daa3e0-5770-4139-8344-dd2b792e159e.png)
@@ -163,6 +164,39 @@ project
 │   │
 │
 ```
+
+## Submissão
+
+1. Crie um fork deste repositório e modifique o README.md inserindo o seu nome no início do arquivo.
+
+2. Instale as dependências usando `npm i`.
+
+3. Implemente cada um dos arquivos esperados (com um `//@TODO: comment` no início)
+
+4. Envie o link no canal `#desafios-jsexpert` da nossa comunidade no discord.
+
+## Até quando?
+
+Se você está pegando esse desafio na estréia, corre lá e envia pra gente até _Quarta-feira, 09 de março de 2022 (28/04/2022)_!
+
+> Dica extra do Wells: Data de entrega curiosamente no dia do aniversário de 22 anos desse que vos fala, então se terminar o desafio no último dia, só vai ser aceito se mandar um parabéns no chat, hein? 😄 Bons estudos e ótimo desafio!
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+Sessão nova e proibida a seguir, cuidado
+.
+.
+.
+.
+.
+.
 
 ### Sugestão de implementação
 
@@ -329,19 +363,3 @@ project
       },
     ];
     ```
-
-## Submissão
-
-1. Crie um fork deste repositório e modifique o README.md inserindo o seu nome no início do arquivo.
-
-2. Instale as dependências usando `npm i`.
-
-3. Implemente cada um dos arquivos esperados (com um `//@TODO: comment` no início)
-
-4. Envie o link no canal `#desafios-jsexpert` da nossa comunidade no discord.
-
-## Até quando?
-
-Se você está pegando esse desafio na estréia, corre lá e envia pra gente até _Quarta-feira, 09 de março de 2022 (28/04/2022)_!
-
-> Dica extra do Wells: Data de entrega curiosamente no dia do aniversário de 22 anos desse que vos fala, então se terminar o desafio no último dia, só vai ser aceito se mandar um parabéns no chat, hein? 😄 Bons estudos e ótimo desafio!
