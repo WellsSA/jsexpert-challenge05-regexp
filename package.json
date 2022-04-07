@@ -1,0 +1,30 @@
+{
+  "name": "challenge05-regexp",
+  "author": "Wellington S. Almeida (WellsSA)",
+  "version": "1.0.0",
+  "description": "This is the official repository of the 5th EW.IT code challenge. Which is a Facade/Fluent API based application to extract useful information from governmental csv files using regexps.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "npx mocha --parallel test/*.test.js",
+    "test:dev": "npx mocha -w test/*.test.js",
+    "test:cov": "npx nyc npx mocha --parallel test/*.test.js"
+  },
+  "keywords": [
+    "RegExp",
+    "Regular Expressions",
+    "Facade",
+    "Fluent API",
+    "Challenge",
+    "Code Challenge"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "safe-regex": "^2.1.1"
+  }
+}
