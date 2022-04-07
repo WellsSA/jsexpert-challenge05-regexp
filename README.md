@@ -180,6 +180,6 @@ project
 
 ## Até quando?
 
-Se você está pegando esse desafio na estréia, corre lá e envia pra gente até _Quarta-feira, 09 de março de 2022 (28/04/2022)_!
+Se você está pegando esse desafio na estréia, corre lá e envia pra gente até _Quinta-feira, 28 de abril de 2022 (28/04/2022)_!
 
 > Dica extra do Wells: Data de entrega curiosamente no dia do aniversário de 22 anos desse que vos fala, então se terminar o desafio no último dia, só vai ser aceito se mandar um parabéns no chat, hein? 😄 Bons estudos e ótimo desafio!
