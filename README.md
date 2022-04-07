@@ -1,6 +1,8 @@
-<!-- challenge information -->
+<!-- changable information -->
 
 [challengeguide]: https://wellssa.github.io/jsexpert-challenge-guide/
+[csvdesafio]: https://github.com/WellsSA/jsexpert-challenge05-regexp/blob/master/docs/projeto-de-lei.csv
+[extrahints]: https://github.com/WellsSA/jsexpert-challenge05-regexp/blob/master/DICAS_EXTRAS.md
 
 <!-- description links -->
 
@@ -9,7 +11,6 @@
 [dadosabertosalesp]: https://www.al.sp.gov.br/bases/
 [okfn]: http://okfn.org
 [projetoscsv]: http://www.al.sp.gov.br/bases/projetos/projeto-de-lei.csv
-[csvdesafio]: https://github.com/WellsSA/jsexpert-challenge05-regexp/blob/master/docs/projeto-de-lei.csv
 
 <!-- hints -->
 
@@ -133,6 +134,8 @@ Criar uma classe que receba no construtor os campos `título`, `link`, `autor`, 
 - Para melhorar sua experiência de desenvolvimento, você pode usar a extensão [TODO Highlight][todohighlight] no VSCode, recebendo o auxilio visual para encontrar os `//TODO: comments`, assim:
   ![image](https://user-images.githubusercontent.com/41883467/153465555-f2daa3e0-5770-4139-8344-dd2b792e159e.png)
 
+- Atendendo a pedidos, agora temos ainda mais dicas de como resolver o desafio, pro caso de em algum momento você ficar preso durante o desenvolvimento. O arquivo [DICAS_EXTRAS.md][extrahints] no projeto pode te ajudar.
+
 ### Extras
 
 - Dessa vez não tem desafio opcional, já que ele ficaria muito complexo, maaas, como sempre, para quem busca os "próximos passos" e um desafio ainda maior que o proposto, lá no arquivo `test/mock/valid.js` tem uma sessão de "Nota extra + Dica do Wells" que pode servir de base para um "desafio extra" - mas eu fortemente recomendo que você faça o desafio normal primeiro :)
@@ -180,186 +183,3 @@ project
 Se você está pegando esse desafio na estréia, corre lá e envia pra gente até _Quarta-feira, 09 de março de 2022 (28/04/2022)_!
 
 > Dica extra do Wells: Data de entrega curiosamente no dia do aniversário de 22 anos desse que vos fala, então se terminar o desafio no último dia, só vai ser aceito se mandar um parabéns no chat, hein? 😄 Bons estudos e ótimo desafio!
-
-.
-.
-.
-.
-.
-.
-.
-.
-.
-Sessão nova e proibida a seguir, cuidado
-.
-.
-.
-.
-.
-.
-
-### Sugestão de implementação
-
-> Dica do Wells: Vale lembrar que nesse desafio você é livre pra criar a estrutura que quiser, a sugestão aqui é só um "quick start" pro caso de você querer conferir se a ordem que você pensou em resolver o desafio faz sentido
-
-1. Faça o desafio do módulo 06 junto com o Erick, já que a estrutura do desafio vai ser praticamente a mesma
-
-2. Para fazer a leitura do arquivo no `index.js`, a estrutura do desafio e a dica devem bastar
-
-3. Talvez a maior dificuldade, que é a parte mais diferente, seja pensar nos métodos que ficarão no textProcessorFluentAPI, já que estamos trabalhando com um arquivo completamente diferente do visto em aula
-
-- Pra essa parte do desafio, sinta-se livre pra ir descobrindo como dividir o CSV e pegar a informação
-- Caso queira uma ajuda, aqui está o passo a passo de como foi feita a solução do desafio:
-  - extractHeaders =>
-    - entrada: mock (texto em `/mock/valid.js`)
-    - saída:
-    ```js
-    {
-      headers: 'título;link;autor;etapa;ementa;indexadoresnorma;',
-      content: mock,
-    };
-    ```
-  - extractContent =>
-    - entrada: saída do extractHeaders
-    - saída:
-    ```js
-    {
-      headers: 'título;link;autor;etapa;ementa;indexadoresnorma;',
-      content: [
-        'Projeto de lei 584/2016;http://www.al.sp.gov.br/propositura?id=1322563;Jorge Wilson Xerife do Consumidor;PAUTA;Dispõe sobre a inclusão de cláusula nos contratos de adesão aos serviços de telefonia fixa, de telefonia móvel e de banda larga móvel, e dá outras providências.;CONTRATO, OBRIGATORIEDADE, CLÁUSULA, SERVIÇO, TELEFONIA MÓVEL, TELEFONIA FIXA, PRAZO, INCLUSÃO, RESCISÃO CONTRATUAL, LIBERAÇÃO;',
-        'Projeto de lei 580/2016;http://www.al.sp.gov.br/propositura?id=1323286;Marcia Lia;PAUTA;Estabelece normas gerais para a realização de Concurso Público pela Administração Pública Direta e Indireta do Estado.;NORMAS, REALIZAÇÃO, CONCURSO PÚBLICO ESTADUAL, ESTADO DE SÃO PAULO, ADMINISTRAÇÃO PÚBLICA DIRETA E INDIRETA;',
-        'Projeto de lei 545/2016;http://www.al.sp.gov.br/propositura?id=1322832;Roberto Morais, Itamar Borges;PAUTA;Altera a Lei nº 13.550, de 2009, que dispõe sobre a utilização e proteção da vegetação nativa do Bioma Cerrado no Estado de São Paulo.;',
-      ],
-    };
-    ```
-  - splitValues =>
-    - entrada: saída do extractContent
-    - saída:
-    ```js
-    {
-      headers: [
-        'título',
-        'link',
-        'autor',
-        'etapa',
-        'ementa',
-        'indexadoresnorma',
-      ],
-      content: [
-        [
-          'Projeto de lei 584/2016',
-          'http://www.al.sp.gov.br/propositura?id=1322563',
-          'Jorge Wilson Xerife do Consumidor',
-          'PAUTA',
-          'Dispõe sobre a inclusão de cláusula nos contratos de adesão aos serviços de telefonia fixa, de telefonia móvel e de banda larga móvel, e dá outras providências.',
-          'CONTRATO, OBRIGATORIEDADE, CLÁUSULA, SERVIÇO, TELEFONIA MÓVEL, TELEFONIA FIXA, PRAZO, INCLUSÃO, RESCISÃO CONTRATUAL, LIBERAÇÃO',
-        ],
-        [
-          'Projeto de lei 580/2016',
-          'http://www.al.sp.gov.br/propositura?id=1323286',
-          'Marcia Lia',
-          'PAUTA',
-          'Estabelece normas gerais para a realização de Concurso Público pela Administração Pública Direta e Indireta do Estado.',
-          'NORMAS, REALIZAÇÃO, CONCURSO PÚBLICO ESTADUAL, ESTADO DE SÃO PAULO, ADMINISTRAÇÃO PÚBLICA DIRETA E INDIRETA',
-        ],
-        [
-          'Projeto de lei 545/2016',
-          'http://www.al.sp.gov.br/propositura?id=1322832',
-          'Roberto Morais, Itamar Borges',
-          'PAUTA',
-          'Altera a Lei nº 13.550, de 2009, que dispõe sobre a utilização e proteção da vegetação nativa do Bioma Cerrado no Estado de São Paulo.',
-        ],
-      ],
-    };
-    ```
-  - mapRawObjects =>
-    - entrada: saída do splitValues
-    - saída:
-    ```js
-    [
-      {
-        título: 'Projeto de lei 584/2016',
-        link: 'http://www.al.sp.gov.br/propositura?id=1322563',
-        autor: 'Jorge Wilson Xerife do Consumidor',
-        etapa: 'PAUTA',
-        ementa:
-          'Dispõe sobre a inclusão de cláusula nos contratos de adesão aos serviços de telefonia fixa, de telefonia móvel e de banda larga móvel, e dá outras providências.',
-        indexadoresnorma:
-          'CONTRATO, OBRIGATORIEDADE, CLÁUSULA, SERVIÇO, TELEFONIA MÓVEL, TELEFONIA FIXA, PRAZO, INCLUSÃO, RESCISÃO CONTRATUAL, LIBERAÇÃO',
-      },
-      {
-        título: 'Projeto de lei 580/2016',
-        link: 'http://www.al.sp.gov.br/propositura?id=1323286',
-        autor: 'Marcia Lia',
-        etapa: 'PAUTA',
-        ementa:
-          'Estabelece normas gerais para a realização de Concurso Público pela Administração Pública Direta e Indireta do Estado.',
-        indexadoresnorma:
-          'NORMAS, REALIZAÇÃO, CONCURSO PÚBLICO ESTADUAL, ESTADO DE SÃO PAULO, ADMINISTRAÇÃO PÚBLICA DIRETA E INDIRETA',
-      },
-      {
-        título: 'Projeto de lei 545/2016',
-        link: 'http://www.al.sp.gov.br/propositura?id=1322832',
-        autor: 'Roberto Morais, Itamar Borges',
-        etapa: 'PAUTA',
-        ementa:
-          'Altera a Lei nº 13.550, de 2009, que dispõe sobre a utilização e proteção da vegetação nativa do Bioma Cerrado no Estado de São Paulo.',
-      },
-    ];
-    ```
-  - mapProjects =>
-    - entrada: saída do mapRawObjects
-    - saída:
-    ```js
-    [
-      {
-        id: '1322563',
-        numero: '584',
-        ano: '2016',
-        autores: [
-          {
-            nome: 'Jorge Consumidor',
-          },
-        ],
-        url: 'http://www.al.sp.gov.br/propositura?id=1322563',
-        indexadores: [
-          'CONTRATO',
-          'OBRIGATORIEDADE',
-          'CLÁUSULA',
-          'SERVIÇO',
-          'TELEFONIA MÓVEL',
-          'TELEFONIA FIXA',
-          'PRAZO',
-          'INCLUSÃO',
-          'RESCISÃO CONTRATUAL',
-          'LIBERAÇÃO',
-        ],
-      },
-      {
-        id: '1323286',
-        numero: '580',
-        ano: '2016',
-        autores: [
-          {
-            nome: 'Marcia Lia',
-          },
-        ],
-        url: 'http://www.al.sp.gov.br/propositura?id=1323286',
-        indexadores: [
-          'NORMAS',
-          'REALIZAÇÃO',
-          'CONCURSO PÚBLICO ESTADUAL',
-          'ESTADO DE SÃO PAULO',
-          'ADMINISTRAÇÃO PÚBLICA DIRETA E INDIRETA',
-        ],
-      },
-      {
-        id: '1322832',
-        numero: '545',
-        ano: '2016',
-        autores: [{ nome: 'Roberto Morais' }, { nome: 'Itamar Borges' }],
-        url: 'http://www.al.sp.gov.br/propositura?id=1322832',
-        indexadores: [],
-      },
-    ];
-    ```
