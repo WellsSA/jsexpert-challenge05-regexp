@@ -118,7 +118,7 @@ Criar uma classe que receba no construtor os campos `título`, `link`, `autor`, 
 ## Requisitos do desafio
 
 - [ ] Uso de TDD do início ao fim do projeto
-- [ ] Testes Unitários e 100% de Code Coverage
+- [ ] Testes Unitários e **100% de Code Coverage**
 - [ ] Uso de Expressões Regulares
 - [ ] Validação de segurança de Expressões Regulares
 - [ ] Uso do padrão `Fluent API` e também o padrão `Facade`
@@ -131,7 +131,10 @@ Criar uma classe que receba no construtor os campos `título`, `link`, `autor`, 
 
 - Lembre-se que para trabalhar com `Expressões Regulares`, é possível testar elas em tempo real usando o site [Regex101][regex101], e lembre-se sempre que além das aulas e das anotações, pesquisar no Google e fazer calls na comunidade do discord pode ser algo muito bom caso você fique preso testando as regex.
 
-  > Dica Wells do dia: Seguir certinho o passo a passo usando TDD muito provavelmente vai deixar as coisas bem mais fáceis também :)
+ > Dica Wells do dia: Seguir certinho o passo a passo usando TDD muito provavelmente vai deixar as coisas bem mais fáceis também :)
+
+- Sinta-se livre para traçar sua próprie estratégia de desenvolvimento, mas caso precise, esse print do projeto com 100% de code coverage pode trazer umas idéias das etapas/testes necessários pra concluir o desafio
+![image](https://user-images.githubusercontent.com/41883467/162147258-62e263a2-c3e2-448b-b280-a843a6a5f8fd.png)
 
 - Para melhorar sua experiência de desenvolvimento, você pode usar a extensão [TODO Highlight][todohighlight] no VSCode, recebendo o auxilio visual para encontrar os `//TODO: comments`, assim:
   ![image](https://user-images.githubusercontent.com/41883467/153465555-f2daa3e0-5770-4139-8344-dd2b792e159e.png)
