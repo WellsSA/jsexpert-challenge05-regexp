@@ -127,14 +127,14 @@ Criar uma classe que receba no construtor os campos `título`, `link`, `autor`, 
 
 ### Dicas
 
+- Atendendo a pedidos, agora temos ainda mais dicas de como resolver o desafio, pro caso de em algum momento você ficar preso durante o desenvolvimento. O arquivo [DICAS_EXTRAS.md][extrahints] no projeto pode te ajudar.
+
 - Lembre-se que para trabalhar com `Expressões Regulares`, é possível testar elas em tempo real usando o site [Regex101][regex101], e lembre-se sempre que além das aulas e das anotações, pesquisar no Google e fazer calls na comunidade do discord pode ser algo muito bom caso você fique preso testando as regex.
 
   > Dica Wells do dia: Seguir certinho o passo a passo usando TDD muito provavelmente vai deixar as coisas bem mais fáceis também :)
 
 - Para melhorar sua experiência de desenvolvimento, você pode usar a extensão [TODO Highlight][todohighlight] no VSCode, recebendo o auxilio visual para encontrar os `//TODO: comments`, assim:
   ![image](https://user-images.githubusercontent.com/41883467/153465555-f2daa3e0-5770-4139-8344-dd2b792e159e.png)
-
-- Atendendo a pedidos, agora temos ainda mais dicas de como resolver o desafio, pro caso de em algum momento você ficar preso durante o desenvolvimento. O arquivo [DICAS_EXTRAS.md][extrahints] no projeto pode te ajudar.
 
 ### Extras
 

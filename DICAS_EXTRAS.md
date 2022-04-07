@@ -1,5 +1,11 @@
 # Dicas extras: Mineração de Dados Legislativos
 
+## Motivação
+
+Atendendo a pedidos, agora temos ainda mais dicas de como resolver o desafio, pro caso de em algum momento você ficar preso durante o desenvolvimento.
+
+Aqui você encontra uma coletânea de _dicas extras_ que podem te ajudar durante o processo, mas vale lembrar que é uma boa começar sem elas primeiro, hein?
+
 ### Sugestão de implementação
 
 > Dica do Wells: Vale lembrar que nesse desafio você é livre pra criar a estrutura que quiser, a sugestão aqui é só uma consulta pro caso de você querer conferir se a ordem que você pensou em resolver o desafio faz sentido
